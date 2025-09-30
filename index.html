@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check URLs to detect online threats and suspicious sites (Demonstration purposes only).">
+    <meta property="og:title" content="Netcraft API Frontend">
+    <meta property="og:description" content="Check URLs to detect online threats and suspicious sites (Demonstration purposes only).">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Netcraft API Frontend">
+    <meta name="twitter:description" content="Check URLs to detect online threats and suspicious sites (Demonstration purposes only).">
+    <title>Netcraft API Frontend</title>
+    <link rel="stylesheet" href="styles/light.css">
+    <style>
+      table {
+        table-layout: auto;
+      }
+      .table-container {
+        overflow-x: scroll;
+      }
+      input[type="search"] {
+        width: 100%;
+      }
+      .mono {
+        font-family: monospace;
+        white-space: nowrap;
+      }
+      tr > td {
+        vertical-align: middle;
+      }
+      tr > td > input {
+        margin: revert;
+      }
+      #loading {
+        animation: ps 2s linear infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Netcraft API Frontend</h1>
+      <hr>
+    </header>
+    <main>
+      <section>
+        <form id="scanForm">
+          <label for="url-input">Provide a valid URL and press <kbd>Enter</kbd> or click the "Check" button:</label>
+          <div style="display: flex; gap: 8px; margin-top: 16px;">
+            <input type="url" id="url-input" placeholder="http(s)://www.example.com" required="" style="flex: 1">
+            <button type="submit">Check</button>
+          </div>
+        </form>
+      </section>
+      <section id="loading-message" style="display: none">
+        <p>Fetching data...</p>
+      </section>
+      <section>
+        <table id="results-table" style="display: none">
+          <thead>
+            <tr>
+              <th>Thing</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- results -->
+          </tbody>
+        </table>
+        <p id="error-message" style="display: none; color: red"></p>
+      </section>
+      <details>
+        <summary>Disclaimer</summary>
+        <p> </p><p>Netcraft is a trademark of <a href="https://www.netcraft.com/" target="_blank" rel="noopener noreferrer">Netcraft Ltd</a></p>
+        <p>This is not affiliated with Netcraft. It's intended solely 
+for demonstration purposes and to raise awareness about online risks. 
+Please do not use it —or its source code— for anything beyond that.</p>
+        <p>By using this, you acknowledge and agree that the creator is 
+not responsible for any misuse or consequences resulting from its use.</p>
+      </details>
+      <details>
+        <summary>How to interpret the results?</summary>
+        <ul>
+          <li><b>Risk</b>: A rating associated with the site, anything above 4 should be considered suspicious.</li>
+          <li><b>First Seen</b>: The date when the site was first 
+observed by Netcraft. Be aware that sites with an 'undefined' date (new 
+sites) may not have an accurate rating. </li>
+          <li><b>Pattern Matches</b>: The number of threat patterns that match the given input. Even a single match indicates confirmed malicious activity.</li>
+          <li><b>Note on Netblock / IP</b>: The IP address and netblock may not match when CDNs are involved.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Fallback scanners</summary>
+        <p>Not sure about the results? Try looking up at some of these options:</p>
+        <ul>
+          <li><a href="https://intelix.sophos.com/url" target="_blank" rel="noopener noreferrer">Sophos Intelix</a></li>
+          <li><a href="https://talosintelligence.com/reputation_center/" target="_blank" rel="noopener noreferrer">Cisto Talos</a></li>
+          <li><a href="https://www.ipqualityscore.com/threat-feeds/malicious-url-scanner" target="_blank" rel="noopener noreferrer">IPQualityScore URL Scanner</a></li>
+        </ul>
+      </details>
+    </main>
+    <footer>
+      <p>
+        Licensed under
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">
+          GPL 3.0</a>
+      </p>
+    </footer>
+    <script src="scripts/script.js"></script>
+
+<protonpass-root-7849 data-protonpass-role="root" data-protonpass-theme="os"></protonpass-root-7849></body></html>
