@@ -32,5 +32,5 @@ A simple frontend interface for querying the Netcraft Toolbar API.
 
 ## Notes
 
-- Not affiliated with Netcraft.  
-- For copyright or takedown requests, please open a GitHub iss
+- This is NOT affiliated with Netcraft.  
+- For copyright or takedown requests, please open a GitHub issue
